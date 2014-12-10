@@ -8,3 +8,10 @@ Numerical tool to solve linear [Hamilton Jacobi Bellman Equations](https://en.wi
 It is assumed that the space and the control space are one dimenional.
 
 ![f_0,F:\mathbb{R}\times \mathbb{R} \rightarrow \mathbb{R},\ U\subseteq \mathbb{R} ](pictures/f0-f.jpg)
+
+Function  | Description
+------------- | -------------
+`I=reachableset(x,U,h,Psi,f0Psi,FPsi,f0,F)`  | calculates discrete reachable sets. Note that this function does not depend on `g`.
+`[Xi,v]=HJB( t0,T,N,M1,M2,f0,F,g,U,Omega0)`   | Main function: Returns a Matrix of node Values and the corresponding values of v.
+`v=optimization(Xi,vXi,I,i,j)` | Performs one step assuming the reachable set `I` has already been calculated.
+
